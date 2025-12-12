@@ -1,0 +1,82 @@
+\hypertarget{namespacereal__time__detect}{}\doxysection{real\+\_\+time\+\_\+detect Namespace Reference}
+\label{namespacereal__time__detect}\index{real\_time\_detect@{real\_time\_detect}}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacereal__time__detect_abbbcc27e5f43d67ac7d6a540fe1154ff}{cascade\+\_\+path}} = \char`\"{}haarcascade\+\_\+frontalface\+\_\+default.\+xml\char`\"{}
+\item 
+\mbox{\hyperlink{namespacereal__time__detect_a21b43c8a69d1aad97c417d62e8b8053a}{face\+\_\+cascade}} = cv2.\+Cascade\+Classifier(\mbox{\hyperlink{namespacereal__time__detect_abbbcc27e5f43d67ac7d6a540fe1154ff}{cascade\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespacereal__time__detect_adde78d01aa0cf6bb0a16ab1905a421cd}{picam2}} = Picamera2()
+\item 
+\mbox{\hyperlink{namespacereal__time__detect_af83d97964c9b2a8e5b496a45fbc2f30f}{config}} = picam2.\+create\+\_\+preview\+\_\+configuration(main=\{\char`\"{}size\char`\"{}\+: (640, 480), \char`\"{}format\char`\"{}\+: \char`\"{}RGB888\char`\"{}\})
+\item 
+\mbox{\hyperlink{namespacereal__time__detect_add0c317ac5709d07d966152a63c9ed3e}{frame}} = picam2.\+capture\+\_\+array()
+\item 
+\mbox{\hyperlink{namespacereal__time__detect_a65a6f20a7a6b5b752324a5fbf2ebfd4a}{gray}} = cv2.\+cvt\+Color(\mbox{\hyperlink{namespacereal__time__detect_add0c317ac5709d07d966152a63c9ed3e}{frame}}, cv2.\+COLOR\+\_\+\+RGB2\+GRAY)
+\item 
+\mbox{\hyperlink{namespacereal__time__detect_ad9a4311bdef67875e1b9eecf703ad0b4}{faces}}
+\item 
+\mbox{\hyperlink{namespacereal__time__detect_a267ea2245bb924e02d6efd3dace761cd}{bgr}} = cv2.\+cvt\+Color(\mbox{\hyperlink{namespacereal__time__detect_add0c317ac5709d07d966152a63c9ed3e}{frame}}, cv2.\+COLOR\+\_\+\+RGB2\+BGR)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacereal__time__detect_a267ea2245bb924e02d6efd3dace761cd}\label{namespacereal__time__detect_a267ea2245bb924e02d6efd3dace761cd}} 
+\index{real\_time\_detect@{real\_time\_detect}!bgr@{bgr}}
+\index{bgr@{bgr}!real\_time\_detect@{real\_time\_detect}}
+\doxysubsubsection{\texorpdfstring{bgr}{bgr}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+detect.\+bgr = cv2.\+cvt\+Color(\mbox{\hyperlink{namespacereal__time__detect_add0c317ac5709d07d966152a63c9ed3e}{frame}}, cv2.\+COLOR\+\_\+\+RGB2\+BGR)}
+
+\mbox{\Hypertarget{namespacereal__time__detect_abbbcc27e5f43d67ac7d6a540fe1154ff}\label{namespacereal__time__detect_abbbcc27e5f43d67ac7d6a540fe1154ff}} 
+\index{real\_time\_detect@{real\_time\_detect}!cascade\_path@{cascade\_path}}
+\index{cascade\_path@{cascade\_path}!real\_time\_detect@{real\_time\_detect}}
+\doxysubsubsection{\texorpdfstring{cascade\_path}{cascade\_path}}
+{\footnotesize\ttfamily string real\+\_\+time\+\_\+detect.\+cascade\+\_\+path = \char`\"{}haarcascade\+\_\+frontalface\+\_\+default.\+xml\char`\"{}}
+
+\mbox{\Hypertarget{namespacereal__time__detect_af83d97964c9b2a8e5b496a45fbc2f30f}\label{namespacereal__time__detect_af83d97964c9b2a8e5b496a45fbc2f30f}} 
+\index{real\_time\_detect@{real\_time\_detect}!config@{config}}
+\index{config@{config}!real\_time\_detect@{real\_time\_detect}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+detect.\+config = picam2.\+create\+\_\+preview\+\_\+configuration(main=\{\char`\"{}size\char`\"{}\+: (640, 480), \char`\"{}format\char`\"{}\+: \char`\"{}RGB888\char`\"{}\})}
+
+\mbox{\Hypertarget{namespacereal__time__detect_a21b43c8a69d1aad97c417d62e8b8053a}\label{namespacereal__time__detect_a21b43c8a69d1aad97c417d62e8b8053a}} 
+\index{real\_time\_detect@{real\_time\_detect}!face\_cascade@{face\_cascade}}
+\index{face\_cascade@{face\_cascade}!real\_time\_detect@{real\_time\_detect}}
+\doxysubsubsection{\texorpdfstring{face\_cascade}{face\_cascade}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+detect.\+face\+\_\+cascade = cv2.\+Cascade\+Classifier(\mbox{\hyperlink{namespacereal__time__detect_abbbcc27e5f43d67ac7d6a540fe1154ff}{cascade\+\_\+path}})}
+
+\mbox{\Hypertarget{namespacereal__time__detect_ad9a4311bdef67875e1b9eecf703ad0b4}\label{namespacereal__time__detect_ad9a4311bdef67875e1b9eecf703ad0b4}} 
+\index{real\_time\_detect@{real\_time\_detect}!faces@{faces}}
+\index{faces@{faces}!real\_time\_detect@{real\_time\_detect}}
+\doxysubsubsection{\texorpdfstring{faces}{faces}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+detect.\+faces}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  face\_cascade.detectMultiScale(}
+\DoxyCodeLine{2             gray,}
+\DoxyCodeLine{3             scaleFactor=1.1,}
+\DoxyCodeLine{4             minNeighbors=5,}
+\DoxyCodeLine{5             minSize=(30, 30)}
+\DoxyCodeLine{6         )}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacereal__time__detect_add0c317ac5709d07d966152a63c9ed3e}\label{namespacereal__time__detect_add0c317ac5709d07d966152a63c9ed3e}} 
+\index{real\_time\_detect@{real\_time\_detect}!frame@{frame}}
+\index{frame@{frame}!real\_time\_detect@{real\_time\_detect}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+detect.\+frame = picam2.\+capture\+\_\+array()}
+
+\mbox{\Hypertarget{namespacereal__time__detect_a65a6f20a7a6b5b752324a5fbf2ebfd4a}\label{namespacereal__time__detect_a65a6f20a7a6b5b752324a5fbf2ebfd4a}} 
+\index{real\_time\_detect@{real\_time\_detect}!gray@{gray}}
+\index{gray@{gray}!real\_time\_detect@{real\_time\_detect}}
+\doxysubsubsection{\texorpdfstring{gray}{gray}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+detect.\+gray = cv2.\+cvt\+Color(\mbox{\hyperlink{namespacereal__time__detect_add0c317ac5709d07d966152a63c9ed3e}{frame}}, cv2.\+COLOR\+\_\+\+RGB2\+GRAY)}
+
+\mbox{\Hypertarget{namespacereal__time__detect_adde78d01aa0cf6bb0a16ab1905a421cd}\label{namespacereal__time__detect_adde78d01aa0cf6bb0a16ab1905a421cd}} 
+\index{real\_time\_detect@{real\_time\_detect}!picam2@{picam2}}
+\index{picam2@{picam2}!real\_time\_detect@{real\_time\_detect}}
+\doxysubsubsection{\texorpdfstring{picam2}{picam2}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+detect.\+picam2 = Picamera2()}
+

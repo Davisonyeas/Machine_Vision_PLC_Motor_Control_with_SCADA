@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SAC with PLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <h1>Smart Access Control with PLC</h1>
+  <h4>Author: Davis Onyeoguzoro</h4>
+  <p class="muted">Login → List Devices → Send Command → Check Status of PLC</p>
+
+  <section class="card">
+    <h2>1) Login</h2>
+    <div class="row">
+      <input id="email" placeholder="email" value="test@uidaho.com" />
+      <input id="password" type="password" placeholder="password" value="demo123" />
+      <button id="loginBtn">Login</button>
+      <button id="logoutBtn" class="ghost">Logout</button>
+      <span id="authStatus" class="muted">Not logged in</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2) Devices</h2>
+    <div class="row">
+      <button id="loadDevicesBtn">Devices</button>
+    </div>
+    <pre id="devicesOutput">Click PLC</pre>
+  </section>
+
+  <section class="card">
+    <h2>3) Send Command</h2>
+    <div class="row">
+      <input id="deviceId" placeholder="device_id (e.g., dev_1)" />
+      <input id="commandName" placeholder="command (e.g., motor_start)" />
+      <button id="sendCommandBtn">Send</button>
+    </div>
+    <pre id="commandOutput">Send Commands to the Click PLC</pre>
+  </section>
+
+  <section class="card">
+    <h2>4) Status</h2>
+    <div class="row">
+      <!-- <input id="deviceId" placeholder="device_id (e.g., dev_1)" />
+      <input id="commandName" placeholder="command (e.g., motor_start)" />
+      <button id="sendCommandBtn">Send</button> -->
+    </div>
+    <pre id="commandOutput" class="col">Green</pre>
+  </section>
+
+  <section class="card">
+    <h2>5) Person Detection</h2>
+    <div class="row">
+      <div style="display:flex;gap:1rem;align-items:center;">
+        <div>
+          <strong>Person:</strong>
+          <span id="recognitionName" class="person">Unknown</span>
+        </div>
+        <div>
+          <strong>Status:</strong>
+          <span id="recognitionStatus" class="muted">idle</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./js/config.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>

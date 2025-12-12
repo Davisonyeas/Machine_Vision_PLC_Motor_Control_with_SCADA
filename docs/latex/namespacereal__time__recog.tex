@@ -1,0 +1,126 @@
+\hypertarget{namespacereal__time__recog}{}\doxysection{real\+\_\+time\+\_\+recog Namespace Reference}
+\label{namespacereal__time__recog}\index{real\_time\_recog@{real\_time\_recog}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacereal__time__recog_a3ce8bb534956604e803a8fb82687c70a}{load\+\_\+encodings}} (path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacereal__time__recog_aee54794f000fb3f10d8c428bacf947d2}{ENC\+\_\+\+PATH}} = \char`\"{}face\+\_\+encodings\+\_\+2.\+pkl\char`\"{}
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ada17a52096b94eb0230875539d9004f8}{known\+\_\+encodings}}
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a33b75088b5945eba5c41cd783e7c4706}{known\+\_\+names}}
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ae40de0f17b2de0b23e7b9a77f4ef125c}{picam2}} = Picamera2()
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a07a69f76a7672ec08e8c510d20303d66}{config}} = picam2.\+create\+\_\+preview\+\_\+configuration(main=\{\char`\"{}size\char`\"{}\+: (640, 480)\})
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ae0e7dc06ae661add8768f517e48025d1}{frame}} = picam2.\+capture\+\_\+array()
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a9a90016f592df413d5acc9348c80ddd9}{rgb\+\_\+frame}} = cv2.\+cvt\+Color(\mbox{\hyperlink{namespacereal__time__recog_ae0e7dc06ae661add8768f517e48025d1}{frame}}, cv2.\+COLOR\+\_\+\+BGR2\+RGB)
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a719382716766c4e74d0a6b00eaa5e029}{face\+\_\+locations}} = face\+\_\+recognition.\+face\+\_\+locations(\mbox{\hyperlink{namespacereal__time__recog_a9a90016f592df413d5acc9348c80ddd9}{rgb\+\_\+frame}})
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_afa20b0a849e3698d1560c01fbce25a47}{face\+\_\+encodings}} = face\+\_\+recognition.\+face\+\_\+encodings(\mbox{\hyperlink{namespacereal__time__recog_a9a90016f592df413d5acc9348c80ddd9}{rgb\+\_\+frame}}, \mbox{\hyperlink{namespacereal__time__recog_a719382716766c4e74d0a6b00eaa5e029}{face\+\_\+locations}})
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a1f11310494c88b66ea5768329892ca4c}{dists}} = face\+\_\+recognition.\+face\+\_\+distance(\mbox{\hyperlink{namespacereal__time__recog_ada17a52096b94eb0230875539d9004f8}{known\+\_\+encodings}}, face\+\_\+encoding)
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ad1f06d01e1de97b531507894d65c8797}{best\+\_\+idx}} = np.\+argmin(\mbox{\hyperlink{namespacereal__time__recog_a1f11310494c88b66ea5768329892ca4c}{dists}})
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ac60457ce004f0a6b03720aa71f4f8c2e}{best\+\_\+dist}} = \mbox{\hyperlink{namespacereal__time__recog_a1f11310494c88b66ea5768329892ca4c}{dists}}\mbox{[}\mbox{\hyperlink{namespacereal__time__recog_ad1f06d01e1de97b531507894d65c8797}{best\+\_\+idx}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a436a5c87e2389a0e24548e4284fd667a}{label}} = \mbox{\hyperlink{namespacereal__time__recog_a33b75088b5945eba5c41cd783e7c4706}{known\+\_\+names}}\mbox{[}\mbox{\hyperlink{namespacereal__time__recog_ad1f06d01e1de97b531507894d65c8797}{best\+\_\+idx}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacereal__time__recog_a3ce8bb534956604e803a8fb82687c70a}\label{namespacereal__time__recog_a3ce8bb534956604e803a8fb82687c70a}} 
+\index{real\_time\_recog@{real\_time\_recog}!load\_encodings@{load\_encodings}}
+\index{load\_encodings@{load\_encodings}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{load\_encodings()}{load\_encodings()}}
+{\footnotesize\ttfamily def real\+\_\+time\+\_\+recog.\+load\+\_\+encodings (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacereal__time__recog_ac60457ce004f0a6b03720aa71f4f8c2e}\label{namespacereal__time__recog_ac60457ce004f0a6b03720aa71f4f8c2e}} 
+\index{real\_time\_recog@{real\_time\_recog}!best\_dist@{best\_dist}}
+\index{best\_dist@{best\_dist}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{best\_dist}{best\_dist}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+best\+\_\+dist = \mbox{\hyperlink{namespacereal__time__recog_a1f11310494c88b66ea5768329892ca4c}{dists}}\mbox{[}\mbox{\hyperlink{namespacereal__time__recog_ad1f06d01e1de97b531507894d65c8797}{best\+\_\+idx}}\mbox{]}}
+
+\mbox{\Hypertarget{namespacereal__time__recog_ad1f06d01e1de97b531507894d65c8797}\label{namespacereal__time__recog_ad1f06d01e1de97b531507894d65c8797}} 
+\index{real\_time\_recog@{real\_time\_recog}!best\_idx@{best\_idx}}
+\index{best\_idx@{best\_idx}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{best\_idx}{best\_idx}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+best\+\_\+idx = np.\+argmin(\mbox{\hyperlink{namespacereal__time__recog_a1f11310494c88b66ea5768329892ca4c}{dists}})}
+
+\mbox{\Hypertarget{namespacereal__time__recog_a07a69f76a7672ec08e8c510d20303d66}\label{namespacereal__time__recog_a07a69f76a7672ec08e8c510d20303d66}} 
+\index{real\_time\_recog@{real\_time\_recog}!config@{config}}
+\index{config@{config}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+config = picam2.\+create\+\_\+preview\+\_\+configuration(main=\{\char`\"{}size\char`\"{}\+: (640, 480)\})}
+
+\mbox{\Hypertarget{namespacereal__time__recog_a1f11310494c88b66ea5768329892ca4c}\label{namespacereal__time__recog_a1f11310494c88b66ea5768329892ca4c}} 
+\index{real\_time\_recog@{real\_time\_recog}!dists@{dists}}
+\index{dists@{dists}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{dists}{dists}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+dists = face\+\_\+recognition.\+face\+\_\+distance(\mbox{\hyperlink{namespacereal__time__recog_ada17a52096b94eb0230875539d9004f8}{known\+\_\+encodings}}, face\+\_\+encoding)}
+
+\mbox{\Hypertarget{namespacereal__time__recog_aee54794f000fb3f10d8c428bacf947d2}\label{namespacereal__time__recog_aee54794f000fb3f10d8c428bacf947d2}} 
+\index{real\_time\_recog@{real\_time\_recog}!ENC\_PATH@{ENC\_PATH}}
+\index{ENC\_PATH@{ENC\_PATH}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{ENC\_PATH}{ENC\_PATH}}
+{\footnotesize\ttfamily string real\+\_\+time\+\_\+recog.\+ENC\+\_\+\+PATH = \char`\"{}face\+\_\+encodings\+\_\+2.\+pkl\char`\"{}}
+
+\mbox{\Hypertarget{namespacereal__time__recog_afa20b0a849e3698d1560c01fbce25a47}\label{namespacereal__time__recog_afa20b0a849e3698d1560c01fbce25a47}} 
+\index{real\_time\_recog@{real\_time\_recog}!face\_encodings@{face\_encodings}}
+\index{face\_encodings@{face\_encodings}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{face\_encodings}{face\_encodings}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+face\+\_\+encodings = face\+\_\+recognition.\+face\+\_\+encodings(\mbox{\hyperlink{namespacereal__time__recog_a9a90016f592df413d5acc9348c80ddd9}{rgb\+\_\+frame}}, \mbox{\hyperlink{namespacereal__time__recog_a719382716766c4e74d0a6b00eaa5e029}{face\+\_\+locations}})}
+
+\mbox{\Hypertarget{namespacereal__time__recog_a719382716766c4e74d0a6b00eaa5e029}\label{namespacereal__time__recog_a719382716766c4e74d0a6b00eaa5e029}} 
+\index{real\_time\_recog@{real\_time\_recog}!face\_locations@{face\_locations}}
+\index{face\_locations@{face\_locations}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{face\_locations}{face\_locations}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+face\+\_\+locations = face\+\_\+recognition.\+face\+\_\+locations(\mbox{\hyperlink{namespacereal__time__recog_a9a90016f592df413d5acc9348c80ddd9}{rgb\+\_\+frame}})}
+
+\mbox{\Hypertarget{namespacereal__time__recog_ae0e7dc06ae661add8768f517e48025d1}\label{namespacereal__time__recog_ae0e7dc06ae661add8768f517e48025d1}} 
+\index{real\_time\_recog@{real\_time\_recog}!frame@{frame}}
+\index{frame@{frame}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+frame = picam2.\+capture\+\_\+array()}
+
+\mbox{\Hypertarget{namespacereal__time__recog_ada17a52096b94eb0230875539d9004f8}\label{namespacereal__time__recog_ada17a52096b94eb0230875539d9004f8}} 
+\index{real\_time\_recog@{real\_time\_recog}!known\_encodings@{known\_encodings}}
+\index{known\_encodings@{known\_encodings}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{known\_encodings}{known\_encodings}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+known\+\_\+encodings}
+
+\mbox{\Hypertarget{namespacereal__time__recog_a33b75088b5945eba5c41cd783e7c4706}\label{namespacereal__time__recog_a33b75088b5945eba5c41cd783e7c4706}} 
+\index{real\_time\_recog@{real\_time\_recog}!known\_names@{known\_names}}
+\index{known\_names@{known\_names}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{known\_names}{known\_names}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+known\+\_\+names}
+
+\mbox{\Hypertarget{namespacereal__time__recog_a436a5c87e2389a0e24548e4284fd667a}\label{namespacereal__time__recog_a436a5c87e2389a0e24548e4284fd667a}} 
+\index{real\_time\_recog@{real\_time\_recog}!label@{label}}
+\index{label@{label}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{label}{label}}
+{\footnotesize\ttfamily string real\+\_\+time\+\_\+recog.\+label = \mbox{\hyperlink{namespacereal__time__recog_a33b75088b5945eba5c41cd783e7c4706}{known\+\_\+names}}\mbox{[}\mbox{\hyperlink{namespacereal__time__recog_ad1f06d01e1de97b531507894d65c8797}{best\+\_\+idx}}\mbox{]}}
+
+\mbox{\Hypertarget{namespacereal__time__recog_ae40de0f17b2de0b23e7b9a77f4ef125c}\label{namespacereal__time__recog_ae40de0f17b2de0b23e7b9a77f4ef125c}} 
+\index{real\_time\_recog@{real\_time\_recog}!picam2@{picam2}}
+\index{picam2@{picam2}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{picam2}{picam2}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+picam2 = Picamera2()}
+
+\mbox{\Hypertarget{namespacereal__time__recog_a9a90016f592df413d5acc9348c80ddd9}\label{namespacereal__time__recog_a9a90016f592df413d5acc9348c80ddd9}} 
+\index{real\_time\_recog@{real\_time\_recog}!rgb\_frame@{rgb\_frame}}
+\index{rgb\_frame@{rgb\_frame}!real\_time\_recog@{real\_time\_recog}}
+\doxysubsubsection{\texorpdfstring{rgb\_frame}{rgb\_frame}}
+{\footnotesize\ttfamily real\+\_\+time\+\_\+recog.\+rgb\+\_\+frame = cv2.\+cvt\+Color(\mbox{\hyperlink{namespacereal__time__recog_ae0e7dc06ae661add8768f517e48025d1}{frame}}, cv2.\+COLOR\+\_\+\+BGR2\+RGB)}
+

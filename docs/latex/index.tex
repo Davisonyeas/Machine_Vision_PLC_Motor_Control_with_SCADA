@@ -1,0 +1,88 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+\hypertarget{index_autotoc_md0}{}\doxysection{Smart Acess Control (\+SAC) with PLC}\label{index_autotoc_md0}
+Author\+: {\bfseries{Davis Onyeoguzoro}}
+
+Date\+: September 26, 2025
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{Overview}\label{index_autotoc_md2}
+The {\bfseries{Smart Access Control with PLC}} system integrates {\bfseries{machine vision}} for face recognition with a {\bfseries{CLICK PLC}} for deterministic, safe control of actuators like {\bfseries{Stack lights, buzzers, and stepper motors}}.
+
+It combines the flexibility of {\bfseries{Raspberry Pi 5}} (Vision and AI) with the reliability of {\bfseries{Industrial PLC hardware}} which makes it suitable for academic research as well as factory scenarios.\hypertarget{index_autotoc_md3}{}\doxysubsection{Key Features}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Real-\/time face recognition and allow/deny policy
+\item Stack lights\+: Green = Access Granted, Red = Denied, Yellow = Processing
+\item Motor control via stepper or relay output
+\item PLC safety interlocks\+: E-\/\+Stop (NC), watchdog heartbeat, manual overides
+\item Event logging and remote monitoring via MQTT and REST API
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsection{Process Flow Diagram}\label{index_autotoc_md4}
+ 
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{PLC_Vision_Dav.png}%System Diagram
+\end{DoxyInlineImage}
+   \hypertarget{index_autotoc_md5}{}\doxysubsection{System Architecture}\label{index_autotoc_md5}
+Safety
+\begin{DoxyItemize}
+\item All outputs are conditioned on Safety\+OK
+\item E-\/\+Stop NC breaks power path and drops \char`\"{}\+Safey\+OK\char`\"{} motion OFF, and stacklight RED
+\end{DoxyItemize}
+
+Network and Security
+\begin{DoxyItemize}
+\item Modbus TCP 502 is on an isolated VLAN
+\item MQTT broker 1883 with TLS for events
+\end{DoxyItemize}
+
+Actuation
+\begin{DoxyItemize}
+\item Ladder Logic\+: Rungs gate every output through \char`\"{}\+Safety\+OK\char`\"{}
+\item E-\/\+Stop NC\+: Hardwired to cut motion of actuators and devices, logic forces RED
+\end{DoxyItemize}
+
+Machine Vision
+\begin{DoxyItemize}
+\item Camera + Vision to detect and recognize faces
+\item Controller state machine for states (Idle, Detect, Decide, Allow/\+Deny, Reset)
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsection{Functional Requirements}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Face Detection\+: The camera captures the faces and the machine model on the Raspberry Pi detect faces in incoming frame
+\item Recognition\+: The Raspberry PI compares the captured face against a face-\/encoding database and produces both the name and the confidence of the prediction
+\item Decision\+: For each frame cycle, the controller wwould output a single decision -\/ ALLOW or DENY
+\item Outputs -\/\texorpdfstring{$>$}{>} PLC\+: The Raspberry Pi will write coils, Allow\+Access (C010), Deny\+Access (C011), Busy\+Yellow (C012)
+\item Inputs -\/\texorpdfstring{$>$}{>} PLC\+: The Raspberry Pi will read EStop\+NC (X001), Start (X002)
+\item MQTT Publish\+: On every decision, the Raspberry Pi will publish to sac/events/access with \{name, decision, confidence\}
+\item Safety and {\bfseries{E-\/\+Stop}}\+: Opening the E-\/\+Stop circuit MUST immediately drop motion outputs and force {\bfseries{RED}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysubsection{Hardware Requirements}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Raspberry Pi 5
+\item Camera
+\item Click PLC
+\item Stack lights (Red, Green, Yellow)
+\item Stepper Motor
+\item Motor Driver
+\item Push buttons (Start, Stop), NC E-\/\+STOP
+\item 24 VDC Power Supply for PLC and actuators
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsection{Software Requirements}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item OS\+: Raspberry Pi OS
+\item PLC\+: Click PLC Software -\/ Ladder Logic and Structured Text
+\item Vision\+: Python, Open\+CV, Picamera
+\item Communication\+: Modbus TCP, MQTT
+\item Backend\+: Fast\+API
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{Communication Protocols}\label{index_autotoc_md9}
+Modbus (PI \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} PLC)
+\begin{DoxyItemize}
+\item Write -\/ Pi -\/\texorpdfstring{$>$}{>} PLC\+: Allow\+Access, Deny\+Access, Busy\+Yellow
+\item Read -\/ PLC -\/\texorpdfstring{$>$}{>} Pi\+: EStop\+NC, Start\+NO
+\end{DoxyItemize}
+
+MQTT
+\begin{DoxyItemize}
+\item Publish\+: sac/events/access
+\item Subscribe\+: sac/cmd/reload 
+\end{DoxyItemize}

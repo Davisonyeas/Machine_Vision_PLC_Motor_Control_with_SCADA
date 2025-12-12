@@ -1,0 +1,37 @@
+\hypertarget{rec_8py}{}\doxysection{rec.\+py File Reference}
+\label{rec_8py}\index{rec.py@{rec.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacerec}{rec}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacerec_abb6e52d73549c33194ec652def9b52c5}{rec.\+load\+\_\+encodings}} (path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacerec_a5e17cac64600db76c17bd1a55a2dd412}{rec.\+ENC\+\_\+\+PATH}} = \char`\"{}face\+\_\+encodings.\+pkl\char`\"{}
+\item 
+\mbox{\hyperlink{namespacerec_aa7f68a5472563b0cf64f64b078015a2b}{rec.\+known\+\_\+encodings}}
+\item 
+\mbox{\hyperlink{namespacerec_a4fd4859db862bb6f1cfaa583b0e39d42}{rec.\+known\+\_\+names}}
+\item 
+string \mbox{\hyperlink{namespacerec_aef89f72a05e1125b118811d9f737320c}{rec.\+image\+\_\+path}} = \textquotesingle{}path\+\_\+to\+\_\+image.\+jpg\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacerec_a21471f2da1f3768c7fcc5f52090fdd3a}{rec.\+image}} = cv2.\+imread(image\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacerec_ad982ae42616bdbf13c0a943bdbf1b173}{rec.\+rgb\+\_\+image}} = cv2.\+cvt\+Color(image, cv2.\+COLOR\+\_\+\+BGR2\+RGB)
+\item 
+\mbox{\hyperlink{namespacerec_a38d8fc3edb84dc48c29f7939e2ae94f9}{rec.\+face\+\_\+locations}} = face\+\_\+recognition.\+face\+\_\+locations(rgb\+\_\+image)
+\item 
+\mbox{\hyperlink{namespacerec_aed7b66f3df8f942057ba58fa6ba684d9}{rec.\+face\+\_\+encodings}} = face\+\_\+recognition.\+face\+\_\+encodings(rgb\+\_\+image, face\+\_\+locations)
+\item 
+\mbox{\hyperlink{namespacerec_a8aaa80905c2c01b72c6c7e02dbc2c374}{rec.\+dists}} = face\+\_\+recognition.\+face\+\_\+distance(known\+\_\+encodings, face\+\_\+encoding)
+\item 
+\mbox{\hyperlink{namespacerec_a08b4e719a75285494b10bf34d57669ed}{rec.\+best\+\_\+idx}} = np.\+argmin(dists)
+\item 
+\mbox{\hyperlink{namespacerec_a5ccddd9bbe1e72b76482cdfb0b8d5323}{rec.\+best\+\_\+dist}} = dists\mbox{[}best\+\_\+idx\mbox{]}
+\end{DoxyCompactItemize}

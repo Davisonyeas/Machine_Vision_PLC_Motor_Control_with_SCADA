@@ -1,0 +1,41 @@
+\hypertarget{real__time__recog_8py}{}\doxysection{real\+\_\+time\+\_\+recog.\+py File Reference}
+\label{real__time__recog_8py}\index{real\_time\_recog.py@{real\_time\_recog.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacereal__time__recog}{real\+\_\+time\+\_\+recog}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacereal__time__recog_a3ce8bb534956604e803a8fb82687c70a}{real\+\_\+time\+\_\+recog.\+load\+\_\+encodings}} (path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacereal__time__recog_aee54794f000fb3f10d8c428bacf947d2}{real\+\_\+time\+\_\+recog.\+ENC\+\_\+\+PATH}} = \char`\"{}face\+\_\+encodings\+\_\+2.\+pkl\char`\"{}
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ada17a52096b94eb0230875539d9004f8}{real\+\_\+time\+\_\+recog.\+known\+\_\+encodings}}
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a33b75088b5945eba5c41cd783e7c4706}{real\+\_\+time\+\_\+recog.\+known\+\_\+names}}
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ae40de0f17b2de0b23e7b9a77f4ef125c}{real\+\_\+time\+\_\+recog.\+picam2}} = Picamera2()
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a07a69f76a7672ec08e8c510d20303d66}{real\+\_\+time\+\_\+recog.\+config}} = picam2.\+create\+\_\+preview\+\_\+configuration(main=\{\char`\"{}size\char`\"{}\+: (640, 480)\})
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ae0e7dc06ae661add8768f517e48025d1}{real\+\_\+time\+\_\+recog.\+frame}} = picam2.\+capture\+\_\+array()
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a9a90016f592df413d5acc9348c80ddd9}{real\+\_\+time\+\_\+recog.\+rgb\+\_\+frame}} = cv2.\+cvt\+Color(frame, cv2.\+COLOR\+\_\+\+BGR2\+RGB)
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a719382716766c4e74d0a6b00eaa5e029}{real\+\_\+time\+\_\+recog.\+face\+\_\+locations}} = face\+\_\+recognition.\+face\+\_\+locations(rgb\+\_\+frame)
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_afa20b0a849e3698d1560c01fbce25a47}{real\+\_\+time\+\_\+recog.\+face\+\_\+encodings}} = face\+\_\+recognition.\+face\+\_\+encodings(rgb\+\_\+frame, face\+\_\+locations)
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a1f11310494c88b66ea5768329892ca4c}{real\+\_\+time\+\_\+recog.\+dists}} = face\+\_\+recognition.\+face\+\_\+distance(known\+\_\+encodings, face\+\_\+encoding)
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ad1f06d01e1de97b531507894d65c8797}{real\+\_\+time\+\_\+recog.\+best\+\_\+idx}} = np.\+argmin(dists)
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_ac60457ce004f0a6b03720aa71f4f8c2e}{real\+\_\+time\+\_\+recog.\+best\+\_\+dist}} = dists\mbox{[}best\+\_\+idx\mbox{]}
+\item 
+\mbox{\hyperlink{namespacereal__time__recog_a436a5c87e2389a0e24548e4284fd667a}{real\+\_\+time\+\_\+recog.\+label}} = known\+\_\+names\mbox{[}best\+\_\+idx\mbox{]}
+\end{DoxyCompactItemize}

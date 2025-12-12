@@ -1,0 +1,37 @@
+\hypertarget{r_8py}{}\doxysection{r.\+py File Reference}
+\label{r_8py}\index{r.py@{r.py}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacer}{r}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacer_a44d551f34f84c1621d699a7e3af030dd}{r.\+load\+\_\+encodings}} (path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacer_a77dc1e5785b49ebb311fb3c099102721}{r.\+ENC\+\_\+\+PATH}} = \char`\"{}face\+\_\+encodings.\+pkl\char`\"{}
+\item 
+\mbox{\hyperlink{namespacer_a61dfd5664ae77546dcc982369fc0e2bd}{r.\+known\+\_\+encodings}}
+\item 
+\mbox{\hyperlink{namespacer_a751ec310a9092a9ed30a7c7b6eb801b2}{r.\+known\+\_\+names}}
+\item 
+string \mbox{\hyperlink{namespacer_ad8c1bdc574c72e46b74a87f30c9d83d2}{r.\+image\+\_\+path}} = \textquotesingle{}/home/pi/plcdav/dav.\+jpg\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacer_a6d0990afb4920c726d5937724560527c}{r.\+image}} = cv2.\+imread(image\+\_\+path)
+\item 
+\mbox{\hyperlink{namespacer_ac2d87d1fbc4031ec810e205eaded1d60}{r.\+rgb\+\_\+image}} = cv2.\+cvt\+Color(image, cv2.\+COLOR\+\_\+\+BGR2\+RGB)
+\item 
+\mbox{\hyperlink{namespacer_a01d41e84000fb755621c47c74005e16f}{r.\+face\+\_\+locations}} = face\+\_\+recognition.\+face\+\_\+locations(rgb\+\_\+image)
+\item 
+\mbox{\hyperlink{namespacer_affeb43cfcc196f609a5df092cb396110}{r.\+face\+\_\+encodings}} = face\+\_\+recognition.\+face\+\_\+encodings(rgb\+\_\+image, face\+\_\+locations)
+\item 
+\mbox{\hyperlink{namespacer_a15f02259b7db47846a08caba6824384c}{r.\+dists}} = face\+\_\+recognition.\+face\+\_\+distance(known\+\_\+encodings, face\+\_\+encoding)
+\item 
+\mbox{\hyperlink{namespacer_a9065bf2d3c4237623363e137aeb942a9}{r.\+best\+\_\+idx}} = np.\+argmin(dists)
+\item 
+\mbox{\hyperlink{namespacer_af31ee4d8e0aae3c23cbec029a9a31303}{r.\+best\+\_\+dist}} = dists\mbox{[}best\+\_\+idx\mbox{]}
+\end{DoxyCompactItemize}

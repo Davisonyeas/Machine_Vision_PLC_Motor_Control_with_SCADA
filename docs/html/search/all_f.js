@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['r_0',['r',['../namespacer.html',1,'']]],
+  ['r_2epy_1',['r.py',['../r_8py.html',1,'']]],
+  ['readme_2emd_2',['README.md',['../README_8md.html',1,'']]],
+  ['real_5ftime_5fdetect_3',['real_time_detect',['../namespacereal__time__detect.html',1,'']]],
+  ['real_5ftime_5fdetect_2epy_4',['real_time_detect.py',['../real__time__detect_8py.html',1,'']]],
+  ['real_5ftime_5frecog_5',['real_time_recog',['../namespacereal__time__recog.html',1,'']]],
+  ['real_5ftime_5frecog_2epy_6',['real_time_recog.py',['../real__time__recog_8py.html',1,'']]],
+  ['rec_7',['rec',['../namespacerec.html',1,'']]],
+  ['rec_2epy_8',['rec.py',['../rec_8py.html',1,'']]],
+  ['recog_9',['recog',['../namespacerecog.html',1,'']]],
+  ['recog_2epy_10',['recog.py',['../recog_8py.html',1,'']]],
+  ['recognition_11',['recognition',['../namespacerecognition.html',1,'']]],
+  ['recognition_2epy_12',['recognition.py',['../recognition_8py.html',1,'']]],
+  ['recognizer_2epy_13',['recognizer.py',['../recognizer_8py.html',1,'']]],
+  ['rgb_5fframe_14',['rgb_frame',['../namespacereal__time__recog.html#a9a90016f592df413d5acc9348c80ddd9',1,'real_time_recog']]],
+  ['rgb_5fimage_15',['rgb_image',['../namespacer.html#ac2d87d1fbc4031ec810e205eaded1d60',1,'r.rgb_image()'],['../namespacerec.html#ad982ae42616bdbf13c0a943bdbf1b173',1,'rec.rgb_image()']]]
+];

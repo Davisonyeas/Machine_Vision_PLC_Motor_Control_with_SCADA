@@ -1,0 +1,110 @@
+\hypertarget{namespacer}{}\doxysection{r Namespace Reference}
+\label{namespacer}\index{r@{r}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacer_a44d551f34f84c1621d699a7e3af030dd}{load\+\_\+encodings}} (path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacer_a77dc1e5785b49ebb311fb3c099102721}{ENC\+\_\+\+PATH}} = \char`\"{}face\+\_\+encodings.\+pkl\char`\"{}
+\item 
+\mbox{\hyperlink{namespacer_a61dfd5664ae77546dcc982369fc0e2bd}{known\+\_\+encodings}}
+\item 
+\mbox{\hyperlink{namespacer_a751ec310a9092a9ed30a7c7b6eb801b2}{known\+\_\+names}}
+\item 
+string \mbox{\hyperlink{namespacer_ad8c1bdc574c72e46b74a87f30c9d83d2}{image\+\_\+path}} = \textquotesingle{}/home/pi/plcdav/dav.\+jpg\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespacer_a6d0990afb4920c726d5937724560527c}{image}} = cv2.\+imread(\mbox{\hyperlink{namespacer_ad8c1bdc574c72e46b74a87f30c9d83d2}{image\+\_\+path}})
+\item 
+\mbox{\hyperlink{namespacer_ac2d87d1fbc4031ec810e205eaded1d60}{rgb\+\_\+image}} = cv2.\+cvt\+Color(\mbox{\hyperlink{namespacer_a6d0990afb4920c726d5937724560527c}{image}}, cv2.\+COLOR\+\_\+\+BGR2\+RGB)
+\item 
+\mbox{\hyperlink{namespacer_a01d41e84000fb755621c47c74005e16f}{face\+\_\+locations}} = face\+\_\+recognition.\+face\+\_\+locations(\mbox{\hyperlink{namespacer_ac2d87d1fbc4031ec810e205eaded1d60}{rgb\+\_\+image}})
+\item 
+\mbox{\hyperlink{namespacer_affeb43cfcc196f609a5df092cb396110}{face\+\_\+encodings}} = face\+\_\+recognition.\+face\+\_\+encodings(\mbox{\hyperlink{namespacer_ac2d87d1fbc4031ec810e205eaded1d60}{rgb\+\_\+image}}, \mbox{\hyperlink{namespacer_a01d41e84000fb755621c47c74005e16f}{face\+\_\+locations}})
+\item 
+\mbox{\hyperlink{namespacer_a15f02259b7db47846a08caba6824384c}{dists}} = face\+\_\+recognition.\+face\+\_\+distance(\mbox{\hyperlink{namespacer_a61dfd5664ae77546dcc982369fc0e2bd}{known\+\_\+encodings}}, face\+\_\+encoding)
+\item 
+\mbox{\hyperlink{namespacer_a9065bf2d3c4237623363e137aeb942a9}{best\+\_\+idx}} = np.\+argmin(\mbox{\hyperlink{namespacer_a15f02259b7db47846a08caba6824384c}{dists}})
+\item 
+\mbox{\hyperlink{namespacer_af31ee4d8e0aae3c23cbec029a9a31303}{best\+\_\+dist}} = \mbox{\hyperlink{namespacer_a15f02259b7db47846a08caba6824384c}{dists}}\mbox{[}\mbox{\hyperlink{namespacer_a9065bf2d3c4237623363e137aeb942a9}{best\+\_\+idx}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacer_a44d551f34f84c1621d699a7e3af030dd}\label{namespacer_a44d551f34f84c1621d699a7e3af030dd}} 
+\index{r@{r}!load\_encodings@{load\_encodings}}
+\index{load\_encodings@{load\_encodings}!r@{r}}
+\doxysubsubsection{\texorpdfstring{load\_encodings()}{load\_encodings()}}
+{\footnotesize\ttfamily def r.\+load\+\_\+encodings (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacer_af31ee4d8e0aae3c23cbec029a9a31303}\label{namespacer_af31ee4d8e0aae3c23cbec029a9a31303}} 
+\index{r@{r}!best\_dist@{best\_dist}}
+\index{best\_dist@{best\_dist}!r@{r}}
+\doxysubsubsection{\texorpdfstring{best\_dist}{best\_dist}}
+{\footnotesize\ttfamily r.\+best\+\_\+dist = \mbox{\hyperlink{namespacer_a15f02259b7db47846a08caba6824384c}{dists}}\mbox{[}\mbox{\hyperlink{namespacer_a9065bf2d3c4237623363e137aeb942a9}{best\+\_\+idx}}\mbox{]}}
+
+\mbox{\Hypertarget{namespacer_a9065bf2d3c4237623363e137aeb942a9}\label{namespacer_a9065bf2d3c4237623363e137aeb942a9}} 
+\index{r@{r}!best\_idx@{best\_idx}}
+\index{best\_idx@{best\_idx}!r@{r}}
+\doxysubsubsection{\texorpdfstring{best\_idx}{best\_idx}}
+{\footnotesize\ttfamily r.\+best\+\_\+idx = np.\+argmin(\mbox{\hyperlink{namespacer_a15f02259b7db47846a08caba6824384c}{dists}})}
+
+\mbox{\Hypertarget{namespacer_a15f02259b7db47846a08caba6824384c}\label{namespacer_a15f02259b7db47846a08caba6824384c}} 
+\index{r@{r}!dists@{dists}}
+\index{dists@{dists}!r@{r}}
+\doxysubsubsection{\texorpdfstring{dists}{dists}}
+{\footnotesize\ttfamily r.\+dists = face\+\_\+recognition.\+face\+\_\+distance(\mbox{\hyperlink{namespacer_a61dfd5664ae77546dcc982369fc0e2bd}{known\+\_\+encodings}}, face\+\_\+encoding)}
+
+\mbox{\Hypertarget{namespacer_a77dc1e5785b49ebb311fb3c099102721}\label{namespacer_a77dc1e5785b49ebb311fb3c099102721}} 
+\index{r@{r}!ENC\_PATH@{ENC\_PATH}}
+\index{ENC\_PATH@{ENC\_PATH}!r@{r}}
+\doxysubsubsection{\texorpdfstring{ENC\_PATH}{ENC\_PATH}}
+{\footnotesize\ttfamily string r.\+ENC\+\_\+\+PATH = \char`\"{}face\+\_\+encodings.\+pkl\char`\"{}}
+
+\mbox{\Hypertarget{namespacer_affeb43cfcc196f609a5df092cb396110}\label{namespacer_affeb43cfcc196f609a5df092cb396110}} 
+\index{r@{r}!face\_encodings@{face\_encodings}}
+\index{face\_encodings@{face\_encodings}!r@{r}}
+\doxysubsubsection{\texorpdfstring{face\_encodings}{face\_encodings}}
+{\footnotesize\ttfamily r.\+face\+\_\+encodings = face\+\_\+recognition.\+face\+\_\+encodings(\mbox{\hyperlink{namespacer_ac2d87d1fbc4031ec810e205eaded1d60}{rgb\+\_\+image}}, \mbox{\hyperlink{namespacer_a01d41e84000fb755621c47c74005e16f}{face\+\_\+locations}})}
+
+\mbox{\Hypertarget{namespacer_a01d41e84000fb755621c47c74005e16f}\label{namespacer_a01d41e84000fb755621c47c74005e16f}} 
+\index{r@{r}!face\_locations@{face\_locations}}
+\index{face\_locations@{face\_locations}!r@{r}}
+\doxysubsubsection{\texorpdfstring{face\_locations}{face\_locations}}
+{\footnotesize\ttfamily r.\+face\+\_\+locations = face\+\_\+recognition.\+face\+\_\+locations(\mbox{\hyperlink{namespacer_ac2d87d1fbc4031ec810e205eaded1d60}{rgb\+\_\+image}})}
+
+\mbox{\Hypertarget{namespacer_a6d0990afb4920c726d5937724560527c}\label{namespacer_a6d0990afb4920c726d5937724560527c}} 
+\index{r@{r}!image@{image}}
+\index{image@{image}!r@{r}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily r.\+image = cv2.\+imread(\mbox{\hyperlink{namespacer_ad8c1bdc574c72e46b74a87f30c9d83d2}{image\+\_\+path}})}
+
+\mbox{\Hypertarget{namespacer_ad8c1bdc574c72e46b74a87f30c9d83d2}\label{namespacer_ad8c1bdc574c72e46b74a87f30c9d83d2}} 
+\index{r@{r}!image\_path@{image\_path}}
+\index{image\_path@{image\_path}!r@{r}}
+\doxysubsubsection{\texorpdfstring{image\_path}{image\_path}}
+{\footnotesize\ttfamily string r.\+image\+\_\+path = \textquotesingle{}/home/pi/plcdav/dav.\+jpg\textquotesingle{}}
+
+\mbox{\Hypertarget{namespacer_a61dfd5664ae77546dcc982369fc0e2bd}\label{namespacer_a61dfd5664ae77546dcc982369fc0e2bd}} 
+\index{r@{r}!known\_encodings@{known\_encodings}}
+\index{known\_encodings@{known\_encodings}!r@{r}}
+\doxysubsubsection{\texorpdfstring{known\_encodings}{known\_encodings}}
+{\footnotesize\ttfamily r.\+known\+\_\+encodings}
+
+\mbox{\Hypertarget{namespacer_a751ec310a9092a9ed30a7c7b6eb801b2}\label{namespacer_a751ec310a9092a9ed30a7c7b6eb801b2}} 
+\index{r@{r}!known\_names@{known\_names}}
+\index{known\_names@{known\_names}!r@{r}}
+\doxysubsubsection{\texorpdfstring{known\_names}{known\_names}}
+{\footnotesize\ttfamily r.\+known\+\_\+names}
+
+\mbox{\Hypertarget{namespacer_ac2d87d1fbc4031ec810e205eaded1d60}\label{namespacer_ac2d87d1fbc4031ec810e205eaded1d60}} 
+\index{r@{r}!rgb\_image@{rgb\_image}}
+\index{rgb\_image@{rgb\_image}!r@{r}}
+\doxysubsubsection{\texorpdfstring{rgb\_image}{rgb\_image}}
+{\footnotesize\ttfamily r.\+rgb\+\_\+image = cv2.\+cvt\+Color(\mbox{\hyperlink{namespacer_a6d0990afb4920c726d5937724560527c}{image}}, cv2.\+COLOR\+\_\+\+BGR2\+RGB)}
+

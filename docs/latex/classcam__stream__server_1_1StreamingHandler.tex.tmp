@@ -1,0 +1,43 @@
+\hypertarget{classcam__stream__server_1_1StreamingHandler}{}\doxysection{cam\+\_\+stream\+\_\+server.\+Streaming\+Handler Class Reference}
+\label{classcam__stream__server_1_1StreamingHandler}\index{cam\_stream\_server.StreamingHandler@{cam\_stream\_server.StreamingHandler}}
+
+
+Inheritance diagram for cam\+\_\+stream\+\_\+server.\+Streaming\+Handler\+:
+% FIG 0
+
+
+Collaboration diagram for cam\+\_\+stream\+\_\+server.\+Streaming\+Handler\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcam__stream__server_1_1StreamingHandler_a8661b614edb06e5f02ee6608ab8b3354}{do\+\_\+\+GET}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcam__stream__server_1_1StreamingHandler_a7e9a93c86997bdff51576cfbe4853454}{path}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcam__stream__server_1_1StreamingHandler_a8661b614edb06e5f02ee6608ab8b3354}\label{classcam__stream__server_1_1StreamingHandler_a8661b614edb06e5f02ee6608ab8b3354}} 
+\index{cam\_stream\_server.StreamingHandler@{cam\_stream\_server.StreamingHandler}!do\_GET@{do\_GET}}
+\index{do\_GET@{do\_GET}!cam\_stream\_server.StreamingHandler@{cam\_stream\_server.StreamingHandler}}
+\doxysubsubsection{\texorpdfstring{do\_GET()}{do\_GET()}}
+{\footnotesize\ttfamily def cam\+\_\+stream\+\_\+server.\+Streaming\+Handler.\+do\+\_\+\+GET (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcam__stream__server_1_1StreamingHandler_a7e9a93c86997bdff51576cfbe4853454}\label{classcam__stream__server_1_1StreamingHandler_a7e9a93c86997bdff51576cfbe4853454}} 
+\index{cam\_stream\_server.StreamingHandler@{cam\_stream\_server.StreamingHandler}!path@{path}}
+\index{path@{path}!cam\_stream\_server.StreamingHandler@{cam\_stream\_server.StreamingHandler}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily cam\+\_\+stream\+\_\+server.\+Streaming\+Handler.\+path}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cam__stream__server_8py}{cam\+\_\+stream\+\_\+server.\+py}}\end{DoxyCompactItemize}

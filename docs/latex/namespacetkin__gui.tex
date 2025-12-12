@@ -1,0 +1,292 @@
+\hypertarget{namespacetkin__gui}{}\doxysection{tkin\+\_\+gui Namespace Reference}
+\label{namespacetkin__gui}\index{tkin\_gui@{tkin\_gui}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacetkin__gui_ad43e8a589fa2257b9486aa4a05e4af3d}{clear\+\_\+placeholder}} (event)
+\item 
+def \mbox{\hyperlink{namespacetkin__gui_afc5286b360bcf189a2531304638459ac}{add\+\_\+placeholder}} (event)
+\item 
+def \mbox{\hyperlink{namespacetkin__gui_a5843a89ab8c9f78a445fa5941c576780}{submit}} (event=None)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a825c321dced386fd9acde618048f02c5}{picam2}} = Picamera2()
+\item 
+string \mbox{\hyperlink{namespacetkin__gui_adcca9c4f6f268b287d1d4445c8bdcddf}{data\+\_\+dir}} = \char`\"{}db/faces\+\_\+data/\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}{name\+\_\+of\+\_\+person}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_ab5967763959b14c84b47901b8741bfee}{text\+\_\+widget}} = None
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a80820614df2a8fc65366c552ebda94eb}{status\+\_\+label}} = None
+\item 
+\mbox{\hyperlink{namespacetkin__gui_aa4738e617441f6f57db06e8bfb8287b0}{num\+\_\+images}} = None
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a0e64fc967ad7595c15fc5ad7deb20491}{count\+\_\+entry}} = None
+\item 
+string \mbox{\hyperlink{namespacetkin__gui_a70d21295de0d5d6c87ebe722601062a0}{placeholder\+\_\+text}} = \char`\"{}Enter Name of Persin here\char`\"{}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a9795f1b1f0a49b9ccbf2e19041c824ee}{window}} = tk.\+Tk()
+\item 
+\mbox{\hyperlink{namespacetkin__gui_afc4a20866e39b0d034ee7a00074161a1}{exist\+\_\+ok}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_aa6a3f820be9a5eeb635bafda0b0d4c50}{text}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a5fec9d6954cd34c8b8c80fc8ebe7df6c}{font}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a230abfccbf91888f7398b6244960c4ba}{anchor}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a5fdf29338dae67d58304916392e1ffe0}{padx}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_ae3cd9d6a8bdcd204f3af48425a54cfc3}{pady}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a5910701959106abedfe1617ff02366ef}{names\+\_\+frame}} = tk.\+Frame(\mbox{\hyperlink{namespacetkin__gui_a9795f1b1f0a49b9ccbf2e19041c824ee}{window}})
+\item 
+\mbox{\hyperlink{namespacetkin__gui_ae011e6adbb8207b78b8b278076f40a71}{fill}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a9ab0fefae37468fb9847950d9fff1f8d}{entry\+\_\+frame}} = tk.\+Frame(\mbox{\hyperlink{namespacetkin__gui_a9795f1b1f0a49b9ccbf2e19041c824ee}{window}})
+\item 
+\mbox{\hyperlink{namespacetkin__gui_adea85c57354b534a833218ec86331602}{fg}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a4c244ad77a288bc34b3ed905964f26cf}{btn}} = tk.\+Button(\mbox{\hyperlink{namespacetkin__gui_a9ab0fefae37468fb9847950d9fff1f8d}{entry\+\_\+frame}}, \mbox{\hyperlink{namespacetkin__gui_aa6a3f820be9a5eeb635bafda0b0d4c50}{text}}=\char`\"{}Submit\char`\"{}, command=\mbox{\hyperlink{namespacetkin__gui_a5843a89ab8c9f78a445fa5941c576780}{submit}})
+\item 
+int \mbox{\hyperlink{namespacetkin__gui_a13037af82800d78415d10d13be54ff19}{number\+\_\+of\+\_\+pics}} = 100
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a96a8aac9a5d514bb20e91c6472b90e82}{camera\+\_\+config}} = picam2.\+create\+\_\+still\+\_\+configuration(main=\{\char`\"{}size\char`\"{}\+: (640, 480)\})
+\item 
+string \mbox{\hyperlink{namespacetkin__gui_a6c442c6e70e0cf067f57a3f35be4a084}{fil}} = \char`\"{}Dvi.\+jpg\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacetkin__gui_af1d8f88726b5d22a889e1af9e74945f6}{filename}} = f\char`\"{}\{data\+\_\+dir\}\{\mbox{\hyperlink{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}{name\+\_\+of\+\_\+person}}\}\char`\"{}
+\item 
+string \mbox{\hyperlink{namespacetkin__gui_abee7823cd5711389d4829bbf9b6d3bea}{filaa}} = \mbox{\hyperlink{namespacetkin__gui_adcca9c4f6f268b287d1d4445c8bdcddf}{data\+\_\+dir}} + \mbox{\hyperlink{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}{name\+\_\+of\+\_\+person}} + \mbox{\hyperlink{namespacetkin__gui_a6c442c6e70e0cf067f57a3f35be4a084}{fil}}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a9b87601f28b9d3ab5ff76fe23533fd36}{person\+\_\+dir}} = os.\+path.\+join(\mbox{\hyperlink{namespacetkin__gui_adcca9c4f6f268b287d1d4445c8bdcddf}{data\+\_\+dir}}, \mbox{\hyperlink{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}{name\+\_\+of\+\_\+person}})
+\item 
+list \mbox{\hyperlink{namespacetkin__gui_a3c772712567ce78c16649b383609115d}{existing\+\_\+img}}
+\item 
+list \mbox{\hyperlink{namespacetkin__gui_a16812c6159fbdcb356e7ff19513ea4e2}{numbers}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a2fb5d3c83d606f3081a426992be367bc}{num}} = int(f.\+split(\char`\"{}\+\_\+\char`\"{})\mbox{[}-\/1\mbox{]}.split(\char`\"{}.\char`\"{})\mbox{[}0\mbox{]})
+\item 
+int \mbox{\hyperlink{namespacetkin__gui_a6cc3c41a0c05a55cbb5d1097aa8ba602}{start\+\_\+index}} = max(\mbox{\hyperlink{namespacetkin__gui_a16812c6159fbdcb356e7ff19513ea4e2}{numbers}}) + 1 if \mbox{\hyperlink{namespacetkin__gui_a16812c6159fbdcb356e7ff19513ea4e2}{numbers}} else 0
+\item 
+\mbox{\hyperlink{namespacetkin__gui_a5501f27bf48432040f0647ab1b9f7fbb}{outfile}} = os.\+path.\+join(\mbox{\hyperlink{namespacetkin__gui_a9b87601f28b9d3ab5ff76fe23533fd36}{person\+\_\+dir}}, f\char`\"{}\{name\+\_\+of\+\_\+person\}\+\_\+\{\mbox{\hyperlink{namespacetkin__gui_a6cc3c41a0c05a55cbb5d1097aa8ba602}{start\+\_\+index}} + i\+:03d\}.jpg\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacetkin__gui_afc5286b360bcf189a2531304638459ac}\label{namespacetkin__gui_afc5286b360bcf189a2531304638459ac}} 
+\index{tkin\_gui@{tkin\_gui}!add\_placeholder@{add\_placeholder}}
+\index{add\_placeholder@{add\_placeholder}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{add\_placeholder()}{add\_placeholder()}}
+{\footnotesize\ttfamily def tkin\+\_\+gui.\+add\+\_\+placeholder (\begin{DoxyParamCaption}\item[{}]{event }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetkin__gui_ad43e8a589fa2257b9486aa4a05e4af3d}\label{namespacetkin__gui_ad43e8a589fa2257b9486aa4a05e4af3d}} 
+\index{tkin\_gui@{tkin\_gui}!clear\_placeholder@{clear\_placeholder}}
+\index{clear\_placeholder@{clear\_placeholder}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{clear\_placeholder()}{clear\_placeholder()}}
+{\footnotesize\ttfamily def tkin\+\_\+gui.\+clear\+\_\+placeholder (\begin{DoxyParamCaption}\item[{}]{event }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacetkin__gui_a5843a89ab8c9f78a445fa5941c576780}\label{namespacetkin__gui_a5843a89ab8c9f78a445fa5941c576780}} 
+\index{tkin\_gui@{tkin\_gui}!submit@{submit}}
+\index{submit@{submit}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{submit()}{submit()}}
+{\footnotesize\ttfamily def tkin\+\_\+gui.\+submit (\begin{DoxyParamCaption}\item[{}]{event = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacetkin__gui_a230abfccbf91888f7398b6244960c4ba}\label{namespacetkin__gui_a230abfccbf91888f7398b6244960c4ba}} 
+\index{tkin\_gui@{tkin\_gui}!anchor@{anchor}}
+\index{anchor@{anchor}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{anchor}{anchor}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+anchor}
+
+\mbox{\Hypertarget{namespacetkin__gui_a4c244ad77a288bc34b3ed905964f26cf}\label{namespacetkin__gui_a4c244ad77a288bc34b3ed905964f26cf}} 
+\index{tkin\_gui@{tkin\_gui}!btn@{btn}}
+\index{btn@{btn}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{btn}{btn}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+btn = tk.\+Button(\mbox{\hyperlink{namespacetkin__gui_a9ab0fefae37468fb9847950d9fff1f8d}{entry\+\_\+frame}}, \mbox{\hyperlink{namespacetkin__gui_aa6a3f820be9a5eeb635bafda0b0d4c50}{text}}=\char`\"{}Submit\char`\"{}, command=\mbox{\hyperlink{namespacetkin__gui_a5843a89ab8c9f78a445fa5941c576780}{submit}})}
+
+\mbox{\Hypertarget{namespacetkin__gui_a96a8aac9a5d514bb20e91c6472b90e82}\label{namespacetkin__gui_a96a8aac9a5d514bb20e91c6472b90e82}} 
+\index{tkin\_gui@{tkin\_gui}!camera\_config@{camera\_config}}
+\index{camera\_config@{camera\_config}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{camera\_config}{camera\_config}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+camera\+\_\+config = picam2.\+create\+\_\+still\+\_\+configuration(main=\{\char`\"{}size\char`\"{}\+: (640, 480)\})}
+
+\mbox{\Hypertarget{namespacetkin__gui_a0e64fc967ad7595c15fc5ad7deb20491}\label{namespacetkin__gui_a0e64fc967ad7595c15fc5ad7deb20491}} 
+\index{tkin\_gui@{tkin\_gui}!count\_entry@{count\_entry}}
+\index{count\_entry@{count\_entry}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{count\_entry}{count\_entry}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+count\+\_\+entry = None}
+
+\mbox{\Hypertarget{namespacetkin__gui_adcca9c4f6f268b287d1d4445c8bdcddf}\label{namespacetkin__gui_adcca9c4f6f268b287d1d4445c8bdcddf}} 
+\index{tkin\_gui@{tkin\_gui}!data\_dir@{data\_dir}}
+\index{data\_dir@{data\_dir}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{data\_dir}{data\_dir}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+data\+\_\+dir = \char`\"{}db/faces\+\_\+data/\char`\"{}}
+
+\mbox{\Hypertarget{namespacetkin__gui_a9ab0fefae37468fb9847950d9fff1f8d}\label{namespacetkin__gui_a9ab0fefae37468fb9847950d9fff1f8d}} 
+\index{tkin\_gui@{tkin\_gui}!entry\_frame@{entry\_frame}}
+\index{entry\_frame@{entry\_frame}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{entry\_frame}{entry\_frame}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+entry\+\_\+frame = tk.\+Frame(\mbox{\hyperlink{namespacetkin__gui_a9795f1b1f0a49b9ccbf2e19041c824ee}{window}})}
+
+\mbox{\Hypertarget{namespacetkin__gui_afc4a20866e39b0d034ee7a00074161a1}\label{namespacetkin__gui_afc4a20866e39b0d034ee7a00074161a1}} 
+\index{tkin\_gui@{tkin\_gui}!exist\_ok@{exist\_ok}}
+\index{exist\_ok@{exist\_ok}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{exist\_ok}{exist\_ok}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+exist\+\_\+ok}
+
+\mbox{\Hypertarget{namespacetkin__gui_a3c772712567ce78c16649b383609115d}\label{namespacetkin__gui_a3c772712567ce78c16649b383609115d}} 
+\index{tkin\_gui@{tkin\_gui}!existing\_img@{existing\_img}}
+\index{existing\_img@{existing\_img}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{existing\_img}{existing\_img}}
+{\footnotesize\ttfamily list tkin\+\_\+gui.\+existing\+\_\+img}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 =  [f \textcolor{keywordflow}{for} f \textcolor{keywordflow}{in} os.listdir(person\_dir) \textcolor{keywordflow}{if} f.startswith(name\_of\_person) }
+\DoxyCodeLine{2                 \textcolor{keywordflow}{and} f.endswith(\textcolor{stringliteral}{"{}.jpg"{}})]}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacetkin__gui_adea85c57354b534a833218ec86331602}\label{namespacetkin__gui_adea85c57354b534a833218ec86331602}} 
+\index{tkin\_gui@{tkin\_gui}!fg@{fg}}
+\index{fg@{fg}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{fg}{fg}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+fg}
+
+\mbox{\Hypertarget{namespacetkin__gui_a6c442c6e70e0cf067f57a3f35be4a084}\label{namespacetkin__gui_a6c442c6e70e0cf067f57a3f35be4a084}} 
+\index{tkin\_gui@{tkin\_gui}!fil@{fil}}
+\index{fil@{fil}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{fil}{fil}}
+{\footnotesize\ttfamily string tkin\+\_\+gui.\+fil = \char`\"{}Dvi.\+jpg\char`\"{}}
+
+\mbox{\Hypertarget{namespacetkin__gui_abee7823cd5711389d4829bbf9b6d3bea}\label{namespacetkin__gui_abee7823cd5711389d4829bbf9b6d3bea}} 
+\index{tkin\_gui@{tkin\_gui}!filaa@{filaa}}
+\index{filaa@{filaa}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{filaa}{filaa}}
+{\footnotesize\ttfamily string tkin\+\_\+gui.\+filaa = \mbox{\hyperlink{namespacetkin__gui_adcca9c4f6f268b287d1d4445c8bdcddf}{data\+\_\+dir}} + \mbox{\hyperlink{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}{name\+\_\+of\+\_\+person}} + \mbox{\hyperlink{namespacetkin__gui_a6c442c6e70e0cf067f57a3f35be4a084}{fil}}}
+
+\mbox{\Hypertarget{namespacetkin__gui_af1d8f88726b5d22a889e1af9e74945f6}\label{namespacetkin__gui_af1d8f88726b5d22a889e1af9e74945f6}} 
+\index{tkin\_gui@{tkin\_gui}!filename@{filename}}
+\index{filename@{filename}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily string tkin\+\_\+gui.\+filename = f\char`\"{}\{data\+\_\+dir\}\{\mbox{\hyperlink{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}{name\+\_\+of\+\_\+person}}\}\char`\"{}}
+
+\mbox{\Hypertarget{namespacetkin__gui_ae011e6adbb8207b78b8b278076f40a71}\label{namespacetkin__gui_ae011e6adbb8207b78b8b278076f40a71}} 
+\index{tkin\_gui@{tkin\_gui}!fill@{fill}}
+\index{fill@{fill}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{fill}{fill}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+fill}
+
+\mbox{\Hypertarget{namespacetkin__gui_a5fec9d6954cd34c8b8c80fc8ebe7df6c}\label{namespacetkin__gui_a5fec9d6954cd34c8b8c80fc8ebe7df6c}} 
+\index{tkin\_gui@{tkin\_gui}!font@{font}}
+\index{font@{font}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+font}
+
+\mbox{\Hypertarget{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}\label{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}} 
+\index{tkin\_gui@{tkin\_gui}!name\_of\_person@{name\_of\_person}}
+\index{name\_of\_person@{name\_of\_person}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{name\_of\_person}{name\_of\_person}}
+{\footnotesize\ttfamily string tkin\+\_\+gui.\+name\+\_\+of\+\_\+person = \char`\"{}\char`\"{}}
+
+\mbox{\Hypertarget{namespacetkin__gui_a5910701959106abedfe1617ff02366ef}\label{namespacetkin__gui_a5910701959106abedfe1617ff02366ef}} 
+\index{tkin\_gui@{tkin\_gui}!names\_frame@{names\_frame}}
+\index{names\_frame@{names\_frame}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{names\_frame}{names\_frame}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+names\+\_\+frame = tk.\+Frame(\mbox{\hyperlink{namespacetkin__gui_a9795f1b1f0a49b9ccbf2e19041c824ee}{window}})}
+
+\mbox{\Hypertarget{namespacetkin__gui_a2fb5d3c83d606f3081a426992be367bc}\label{namespacetkin__gui_a2fb5d3c83d606f3081a426992be367bc}} 
+\index{tkin\_gui@{tkin\_gui}!num@{num}}
+\index{num@{num}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{num}{num}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+num = int(f.\+split(\char`\"{}\+\_\+\char`\"{})\mbox{[}-\/1\mbox{]}.split(\char`\"{}.\char`\"{})\mbox{[}0\mbox{]})}
+
+\mbox{\Hypertarget{namespacetkin__gui_aa4738e617441f6f57db06e8bfb8287b0}\label{namespacetkin__gui_aa4738e617441f6f57db06e8bfb8287b0}} 
+\index{tkin\_gui@{tkin\_gui}!num\_images@{num\_images}}
+\index{num\_images@{num\_images}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{num\_images}{num\_images}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+num\+\_\+images = None}
+
+\mbox{\Hypertarget{namespacetkin__gui_a13037af82800d78415d10d13be54ff19}\label{namespacetkin__gui_a13037af82800d78415d10d13be54ff19}} 
+\index{tkin\_gui@{tkin\_gui}!number\_of\_pics@{number\_of\_pics}}
+\index{number\_of\_pics@{number\_of\_pics}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{number\_of\_pics}{number\_of\_pics}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+number\+\_\+of\+\_\+pics = 100}
+
+\mbox{\Hypertarget{namespacetkin__gui_a16812c6159fbdcb356e7ff19513ea4e2}\label{namespacetkin__gui_a16812c6159fbdcb356e7ff19513ea4e2}} 
+\index{tkin\_gui@{tkin\_gui}!numbers@{numbers}}
+\index{numbers@{numbers}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{numbers}{numbers}}
+{\footnotesize\ttfamily list tkin\+\_\+gui.\+numbers = \mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{namespacetkin__gui_a5501f27bf48432040f0647ab1b9f7fbb}\label{namespacetkin__gui_a5501f27bf48432040f0647ab1b9f7fbb}} 
+\index{tkin\_gui@{tkin\_gui}!outfile@{outfile}}
+\index{outfile@{outfile}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{outfile}{outfile}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+outfile = os.\+path.\+join(\mbox{\hyperlink{namespacetkin__gui_a9b87601f28b9d3ab5ff76fe23533fd36}{person\+\_\+dir}}, f\char`\"{}\{name\+\_\+of\+\_\+person\}\+\_\+\{\mbox{\hyperlink{namespacetkin__gui_a6cc3c41a0c05a55cbb5d1097aa8ba602}{start\+\_\+index}} + i\+:03d\}.jpg\char`\"{})}
+
+\mbox{\Hypertarget{namespacetkin__gui_a5fdf29338dae67d58304916392e1ffe0}\label{namespacetkin__gui_a5fdf29338dae67d58304916392e1ffe0}} 
+\index{tkin\_gui@{tkin\_gui}!padx@{padx}}
+\index{padx@{padx}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{padx}{padx}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+padx}
+
+\mbox{\Hypertarget{namespacetkin__gui_ae3cd9d6a8bdcd204f3af48425a54cfc3}\label{namespacetkin__gui_ae3cd9d6a8bdcd204f3af48425a54cfc3}} 
+\index{tkin\_gui@{tkin\_gui}!pady@{pady}}
+\index{pady@{pady}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{pady}{pady}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+pady}
+
+\mbox{\Hypertarget{namespacetkin__gui_a9b87601f28b9d3ab5ff76fe23533fd36}\label{namespacetkin__gui_a9b87601f28b9d3ab5ff76fe23533fd36}} 
+\index{tkin\_gui@{tkin\_gui}!person\_dir@{person\_dir}}
+\index{person\_dir@{person\_dir}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{person\_dir}{person\_dir}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+person\+\_\+dir = os.\+path.\+join(\mbox{\hyperlink{namespacetkin__gui_adcca9c4f6f268b287d1d4445c8bdcddf}{data\+\_\+dir}}, \mbox{\hyperlink{namespacetkin__gui_a0b60d678cf5cf43fdda5d72caef2c58e}{name\+\_\+of\+\_\+person}})}
+
+\mbox{\Hypertarget{namespacetkin__gui_a825c321dced386fd9acde618048f02c5}\label{namespacetkin__gui_a825c321dced386fd9acde618048f02c5}} 
+\index{tkin\_gui@{tkin\_gui}!picam2@{picam2}}
+\index{picam2@{picam2}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{picam2}{picam2}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+picam2 = Picamera2()}
+
+\mbox{\Hypertarget{namespacetkin__gui_a70d21295de0d5d6c87ebe722601062a0}\label{namespacetkin__gui_a70d21295de0d5d6c87ebe722601062a0}} 
+\index{tkin\_gui@{tkin\_gui}!placeholder\_text@{placeholder\_text}}
+\index{placeholder\_text@{placeholder\_text}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{placeholder\_text}{placeholder\_text}}
+{\footnotesize\ttfamily string tkin\+\_\+gui.\+placeholder\+\_\+text = \char`\"{}Enter Name of Persin here\char`\"{}}
+
+\mbox{\Hypertarget{namespacetkin__gui_a6cc3c41a0c05a55cbb5d1097aa8ba602}\label{namespacetkin__gui_a6cc3c41a0c05a55cbb5d1097aa8ba602}} 
+\index{tkin\_gui@{tkin\_gui}!start\_index@{start\_index}}
+\index{start\_index@{start\_index}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{start\_index}{start\_index}}
+{\footnotesize\ttfamily int tkin\+\_\+gui.\+start\+\_\+index = max(\mbox{\hyperlink{namespacetkin__gui_a16812c6159fbdcb356e7ff19513ea4e2}{numbers}}) + 1 if \mbox{\hyperlink{namespacetkin__gui_a16812c6159fbdcb356e7ff19513ea4e2}{numbers}} else 0}
+
+\mbox{\Hypertarget{namespacetkin__gui_a80820614df2a8fc65366c552ebda94eb}\label{namespacetkin__gui_a80820614df2a8fc65366c552ebda94eb}} 
+\index{tkin\_gui@{tkin\_gui}!status\_label@{status\_label}}
+\index{status\_label@{status\_label}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{status\_label}{status\_label}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+status\+\_\+label = None}
+
+\mbox{\Hypertarget{namespacetkin__gui_aa6a3f820be9a5eeb635bafda0b0d4c50}\label{namespacetkin__gui_aa6a3f820be9a5eeb635bafda0b0d4c50}} 
+\index{tkin\_gui@{tkin\_gui}!text@{text}}
+\index{text@{text}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+text}
+
+\mbox{\Hypertarget{namespacetkin__gui_ab5967763959b14c84b47901b8741bfee}\label{namespacetkin__gui_ab5967763959b14c84b47901b8741bfee}} 
+\index{tkin\_gui@{tkin\_gui}!text\_widget@{text\_widget}}
+\index{text\_widget@{text\_widget}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{text\_widget}{text\_widget}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+text\+\_\+widget = None}
+
+\mbox{\Hypertarget{namespacetkin__gui_a9795f1b1f0a49b9ccbf2e19041c824ee}\label{namespacetkin__gui_a9795f1b1f0a49b9ccbf2e19041c824ee}} 
+\index{tkin\_gui@{tkin\_gui}!window@{window}}
+\index{window@{window}!tkin\_gui@{tkin\_gui}}
+\doxysubsubsection{\texorpdfstring{window}{window}}
+{\footnotesize\ttfamily tkin\+\_\+gui.\+window = tk.\+Tk()}
+
